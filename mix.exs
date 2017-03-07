@@ -3,6 +3,7 @@ defmodule CaesarCypherElixir.Mixfile do
 
   def project do
     [app: :caesar_cypher_elixir,
+     escript: escript_config(), # CLI executable
      version: "0.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
@@ -33,4 +34,10 @@ defmodule CaesarCypherElixir.Mixfile do
       {:earmark, "~> 1.1"}    # Earmark is a pure-Elixir Markdown converter.
     ]
   end
+
+  # Make a command line executable with escript.
+  defp escript_config do
+    [main_module: (CaesarCypherElixir)]
+  end
+
 end
