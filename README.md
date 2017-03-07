@@ -38,3 +38,15 @@ Examples:
 ```
 ./caesar_cypher_elixir encrypt "abc def" --shift 1                      
 ```
+
+## Test
+
+```
+mix test
+```
+
+## Documentation
+
+```
+mix docs
+```

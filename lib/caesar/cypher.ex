@@ -1,8 +1,25 @@
 defmodule Caesar.Cypher do
+  require Logger
+
   # Module attributes
   @alphabet_size Application.get_env(:caesar_cypher_elixir, :alphabet_size)
 
+  @moduledoc """
+  Caesar Cypher module which maps characters to new characters.
+  """
+
+  @doc """
+  Encrypt the message by applaying a mapping that shifts the alphabet by the
+  `shift` value.
+
+  ## Examples
+    ```
+    iex > Caesar.Cypher.encrypt("hello world!", 1)
+    "gdkkn vnqkc!"
+    ```
+  """
   def encrypt(message, shift) do
+    Logger.debug("encrypting \"#{message}\" with a shift number: #{shift}.")
     message
     # Convert message to char_list.
       |> to_char_list
