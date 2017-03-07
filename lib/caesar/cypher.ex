@@ -1,6 +1,6 @@
 defmodule Caesar.Cypher do
   # Module attributes
-  @alphabet_size 26
+  @alphabet_size Application.get_env(:caesar_cypher_elixir, :alphabet_size)
 
   def encrypt(message, shift) do
     message

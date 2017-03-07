@@ -8,6 +8,8 @@ use Mix.Config
 # if you want to provide default values for your application for
 # 3rd-party users, it should be done in your "mix.exs" file.
 
+config :caesar_cypher_elixir, alphabet_size: 26 
+
 # You can configure for your application as:
 #
 #     config :caesar_cypher_elixir, key: :value
